@@ -54720,7 +54720,7 @@ o.toString
 s=t.p
 return A.d7(r,A.ev(A.a([B.jF,B.yg,B.jF,new A.AD(10,1.1,20,20,o,r),new A.hl(B.y3,new A.jg(B.tB,r,r,A.iF(A.a([new A.jt("designed by Hanish\ud83d\udc93",new A.Qr(),r),B.F1,new A.jt("Copyright \xa9 "+q+", egnimos",r,r)],s),B.au,B.aA,B.ah,B.a_),r),r),B.EX],s),B.aA),B.n,r,r,B.u_,r,p.a.b/2,r,r,r,r,1/0)}}
 A.Qr.prototype={
-$0(){B.al.ZS(window,"","_blank")},
+$0(){B.al.ZS(window,"https://www.linkedin.com/in/hanish-yadav-ba066b209/","_blank")},
 $S:0}
 A.Bs.prototype={
 K(a,b){return new A.nH(new A.Qq(),null)}}

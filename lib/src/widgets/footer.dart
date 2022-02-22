@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'dart:html' as html;
 
 import '../config/k.dart';
 import '../theme/color_theme.dart';
@@ -40,7 +41,22 @@ class Footer extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Align(
               alignment: Alignment.bottomRight,
-              child: FooterText(text: "Copyright \u00a9 $year, egnimos"),
+              child: Row(
+                children: [
+                  FooterText(
+                      text: "designed by Hanish💓",
+                      onClick: () {
+                        html.window.open("", "_blank");
+                      }),
+                  const Spacer(
+                    flex: 3,
+                  ),
+                  FooterText(
+                    text: "Copyright \u00a9 $year, egnimos",
+                    onClick: null,
+                  ),
+                ],
+              ),
             ),
           ),
 
@@ -82,8 +98,14 @@ class FooterRow extends StatelessWidget {
               child: FooterList(
                 heading: "Labels",
                 widgets: [
-                  FooterText(text: "Terms & Conditions"),
-                  FooterText(text: "Privacy Policies"),
+                  FooterText(
+                    text: "Terms & Conditions",
+                    onClick: null,
+                  ),
+                  FooterText(
+                    text: "Privacy Policies",
+                    onClick: null,
+                  ),
                 ],
               ),
             ),
@@ -140,7 +162,7 @@ class FooterIcon extends StatelessWidget {
       height: 100.0,
       width: 100.0,
       child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-        // Flexible(child: Image.asset("assets/images/egnimos_bw.png")),
+        Flexible(child: Image.asset("assets/images/rbucket_bw.png")),
         Flexible(
           child: Padding(
             padding: const EdgeInsets.only(
@@ -205,7 +227,7 @@ class FooterText extends StatefulWidget {
   final void Function()? onClick;
   const FooterText({
     required this.text,
-    this.onClick,
+    required this.onClick,
     Key? key,
   }) : super(key: key);
 
